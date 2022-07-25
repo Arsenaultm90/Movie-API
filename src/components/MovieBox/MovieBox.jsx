@@ -1,4 +1,5 @@
 import React from 'react';
+import './movieBox.scss';
 
 const API_IMG = 'https://image.tmdb.org/t/p/w500';
 
@@ -10,9 +11,12 @@ const MovieBox = ({
 	overview,
 }) => {
 	return (
-		<div>
-			<img src={API_IMG + poster_path} alt='' />
-			<p>{overview}</p>
+		<div className='movieBox'>
+			<div className='movie-container'>
+				<img src={API_IMG + poster_path} alt='' />
+				<h4>{title}</h4>
+				<p>{vote_average}</p>
+			</div>
 		</div>
 	);
 };
