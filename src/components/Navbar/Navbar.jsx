@@ -2,7 +2,14 @@ import { useState } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import './navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({
+	genre,
+	setGenre,
+	rating,
+	setRating,
+	setSearchQuery,
+	searchQuery,
+}) => {
 	const genres = [
 		{ value: 28, label: 'Action' },
 		{ value: 12, label: 'Adventure' },
@@ -34,14 +41,15 @@ const Navbar = () => {
 		{ value: 10, label: '10+' },
 	];
 
-	const [genre, setGenre] = useState(28);
-	const [rating, setRating] = useState(5);
+	const search = (e) => {
+		setSearchQuery(e.currentTarget.value);
+	};
 
 	const handleChange = (event) => {
 		if (event.target.value > 10) {
-			setGenre(event.target.value);
+			setGenre(Number(event.target.value));
 		} else {
-			setRating(event.target.value);
+			setRating(Number(event.target.value));
 		}
 	};
 
@@ -60,6 +68,7 @@ const Navbar = () => {
 					value={rating}
 					onChange={handleChange}
 				/>
+				<input type='text' placeholder='Search' onChange={search} />
 			</div>
 		</nav>
 	);
