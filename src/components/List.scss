@@ -16,9 +16,6 @@
 	gap: 5px;
 }
 
-div:hover {
-}
-
 div:nth-child(1) {
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -31,4 +28,19 @@ div:nth-child(2) {
 	grid-column-end: 6;
 	grid-row-start: 2;
 	grid-row-end: 4;
+}
+
+@media screen and (max-width: 420px) {
+	.list {
+		height: auto;
+	}
+
+	.movie-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 95%;
+		overflow-y: scroll;
+	}
 }
