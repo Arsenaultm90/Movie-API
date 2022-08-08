@@ -1,0 +1,14 @@
+.dropdown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 10px;
+		color: black;
+	}
+}

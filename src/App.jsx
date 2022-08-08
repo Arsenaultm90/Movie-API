@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import MovieBox from './components/MovieBox/MovieBox';
 import Navbar from './components/Navbar/Navbar';
 import List from './components/List';
 
@@ -17,6 +16,7 @@ const App = () => {
 	const [rating, setRating] = useState(1);
 	const [searchQuery, setSearchQuery] = useState('');
 
+	//This useEffect is for fetching data. Certain parameters reruire conditional data fetching (such as looking for all genres)
 	useEffect(() => {
 		console.log(genre);
 		if (genre === 100) {

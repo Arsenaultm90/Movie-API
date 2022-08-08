@@ -81,7 +81,12 @@ const Navbar = ({
 					value={rating}
 					onChange={handleChange}
 				/>
-				<input type='text' placeholder='Search' onChange={search} />
+				<input
+					type='text'
+					placeholder='Search'
+					onChange={search}
+					className='searchBar'
+				/>
 			</div>
 		</nav>
 	);

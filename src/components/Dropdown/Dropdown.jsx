@@ -1,6 +1,8 @@
+import './Dropdown.scss';
+
 const Dropdown = ({ label, value, options, onChange }) => {
 	return (
-		<div>
+		<div className='dropdown'>
 			<label>
 				{label}
 				<select value={value} onChange={onChange}>
