@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import './navbar.scss';
 
@@ -11,6 +11,10 @@ const Navbar = ({
 	searchQuery,
 }) => {
 	const genres = [
+		{
+			value: 100,
+			label: 'Any',
+		},
 		{ value: 28, label: 'Action' },
 		{ value: 12, label: 'Adventure' },
 		{ value: 16, label: 'Animation' },
@@ -33,6 +37,10 @@ const Navbar = ({
 	];
 
 	const ratings = [
+		{ value: 1, label: '1+' },
+		{ value: 2, label: '2+' },
+		{ value: 3, label: '3+' },
+		{ value: 4, label: '4+' },
 		{ value: 5, label: '5+' },
 		{ value: 6, label: '6+' },
 		{ value: 7, label: '7+' },
@@ -40,6 +48,11 @@ const Navbar = ({
 		{ value: 9, label: '9+' },
 		{ value: 10, label: '10+' },
 	];
+
+	useEffect(() => {
+		setGenre(genres[1].value);
+		setRating(ratings[0].value);
+	}, []);
 
 	const search = (e) => {
 		setSearchQuery(e.currentTarget.value);
