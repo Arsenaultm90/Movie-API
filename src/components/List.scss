@@ -1,9 +1,10 @@
 .list {
 	padding-top: 60px;
-	height: 100vh;
+	height: calc(100vh - 60px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow-y: hidden;
 }
 
 .movie-container {

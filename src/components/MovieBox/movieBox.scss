@@ -10,7 +10,8 @@
 	justify-content: flex-start;
 	overflow: hidden;
 
-	.movie-container {
+	.movieBox-container {
+		position: relative;
 		height: calc(100% - 5px);
 		width: calc(100% - 5px);
 		display: flex;
@@ -26,12 +27,30 @@
 			object-fit: fill;
 		}
 
-		h4 {
-			font-size: 1.2rem;
+		.info {
+			opacity: 0;
+			transition: opacity 0.3s ease-in;
+			overflow-y: scroll;
+
+			h4 {
+				font-size: 2rem;
+			}
+
+			p {
+				font: 1.2rem;
+			}
 		}
 
-		p {
-			font-size: 1.1rem;
+		&:hover .info {
+			opacity: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 0.5) 100%
+			);
 		}
 	}
 }

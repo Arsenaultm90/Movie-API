@@ -50,7 +50,7 @@ const Navbar = ({
 	];
 
 	useEffect(() => {
-		setGenre(genres[1].value);
+		setGenre(genres[0].value);
 		setRating(ratings[0].value);
 	}, []);
 

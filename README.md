@@ -9,7 +9,7 @@ few letters in the box even when its empty. This also stops the filtering dropdo
 
 # Future Updates
 
-- I want to add a landing page that displays 10(API Limit) random movies when the search box is empty.
-- Add multi-page function if the search returns more than 10 results
+- ~~I want to add a landing page that displays 10(API Limit) random movies when the search box is empty.~~
+- ~~Add multi-page function if the search returns more than 10 results~~ (Cannot be done due to API limit)
 - Add some style to the navbar.
 - Add different categories(upcoming, popular, etc) to present the user with options without searching.
